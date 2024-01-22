@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- tailwind script  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,15 +33,15 @@
 
 </head>
 <body class="manrope">
-    <header class="w-5/6 mx-auto my-10">
+    <header class="container mx-auto my-10">
         <div class="flex justify-between items-center">
             <div class="navbar">
-                <div class="navbar-start  flex justify-center gap-4 items-center ">
+                <div class="  flex justify-start gap-4 items-center ">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" /></svg>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm hidden dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabindex="0" class="menu menu-sm lg:hidden dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box ">
                       <li><a>Home</a></li>
                       <li><a>About</a></li>
                       <li><a>Pages</a></li>
@@ -54,8 +55,9 @@
                   
                 </div>
               </div>
-              <div class="navbar-center  hidden  lg:flex">
-                <ul class="menu  px-1  flex  justify-center gap-11 items-center ">
+              <div class="navbar  hidden  lg:flex">
+                <ul class="px-1 flex  justify-center items-centermk gap-10
+                 ">
                       <li><a class="text-[#FF4240]">Home</a></li>
                       <li><a>About</a></li>
                       <li><a>Pages</a></li>
@@ -63,41 +65,51 @@
                       <li><a>Contact</a></li>
                 </ul>
               </div>
-              <div class=" navbar-end flex justify-center gap-6 items-center">
+              <div class="  flex justify-center gap-6 items-center">
                 <i class="hidden lg:flex fa-solid fa-magnifying-glass cursor-pointer"></i>
                 <a class="btn bg-[#FF4240] cursor-pointer flex justify-center items-center rounded-lg  text-lg lg:text-xl font-bold text-[#FFF] py-2 px-4">Get Ticket</a>
               </div>
         </div>
-        <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full">
-              <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
+        <div class="relative container mx-auto ">
+            <div class="carousel w-full h-3/4 mt-8 lg:mt-16">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="Images/1.png" class="w-full " />
+                  <div class="absolute flex justify-center gap-4 transform translate-x-1/2 bottom-8 left-56 lg:left-8 ">
+                    <a href="#slide4" class="btn btn-circle bg-slate-900 text-white">❮</a> 
+                    <a href="#slide2" class="btn btn-circle bg-slate-900 text-white">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img src="Images/2.png" class="w-full " />
+                  <div class="absolute flex justify-center  gap-4 transform translate-x-1/2 bottom-8 left-56 lg:left-8 ">
+                    <a href="#slide1" class="btn btn-circle bg-slate-900 text-white">❮</a> 
+                    <a href="#slide3" class="btn btn-circle bg-slate-900 text-white ">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img src="Images/3.png" class="w-full" />
+                  <div class="absolute flex justify-between gap-4 transform translate-x-1/2 bottom-8 left-56 lg:left-8 ">
+                    <a href="#slide2" class="btn btn-circle bg-slate-900 text-white">❮</a> 
+                    <a href="#slide4" class="btn btn-circle bg-slate-900 text-white">❯</a>
+                  </div>
+                </div> 
+                <div id="slide4" class="carousel-item relative w-full">
+                  <img src="Images/4.png" class="w-full " />
+                  <div class="absolute flex justify-between gap-4 transform translate-x-1/2 bottom-8 left-56 lg:left-8 ">
+                    <a href="#slide3" class="btn btn-circle bg-slate-900 text-white">❮</a> 
+                    <a href="#slide1" class="btn btn-circle bg-slate-900 text-white">❯</a>
+                  </div>
+                </div>
               </div>
-            </div> 
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
+              <div class="bg-[#131318] mt-4 rounded-2xl flex flex-col gap-4  p-8 lg:w-1/2  lg:absolute bottom-8 right-8">
+                <h1 class="text-lg lg:text-3xl text-[#FFF] font-extrabold">Meet all the heroes from the field</h1>
+                <p class="text-[#FFF] opacity-50 text-sm lg:text-base font-medium">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+    
               </div>
-            </div> 
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide4" class="carousel-item relative w-full">
-              <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" class="btn btn-circle">❮</a> 
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
-            </div>
-          </div>
+
+
+        </div>
+        
 
  
     </header>
